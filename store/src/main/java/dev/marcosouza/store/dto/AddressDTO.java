@@ -31,4 +31,13 @@ public class AddressDTO {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
+
+	@Override
+	public String toString() {
+		return "AddressDTO{" +
+				"street='" + street + '\'' +
+				", number='" + number + '\'' +
+				", uf='" + uf + '\'' +
+				'}';
+	}
 }

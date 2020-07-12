@@ -1,6 +1,5 @@
 package dev.marcosouza.store.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,13 +12,16 @@ import dev.marcosouza.store.service.PurchaseService;
 @RestController
 @RequestMapping("/purchase")
 public class PurchaseController {
-	
-	@Autowired
-	private PurchaseService purchaseService;
-	
+
+	private final PurchaseService purchaseService;
+
+	public PurchaseController(PurchaseService purchaseService) {
+		this.purchaseService = purchaseService;
+	}
+
 	@RequestMapping(method = RequestMethod.POST)
-	public Purchase makePurchase(@RequestBody PurchaseDTO purchase) {
-		return purchaseService.makePurchase(purchase);
+	public void makePurchase(@RequestBody PurchaseDTO purchase) {
+		purchaseService.makePurchase(purchase);
 	}
 	
 }

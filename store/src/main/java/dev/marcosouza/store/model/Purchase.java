@@ -6,9 +6,9 @@ public class Purchase {
 	
 	private Long requestId;
 	
-	public Long waitingIime;
+	public Integer waitingIime;
 	
-	public Long deiveryAddress;
+	public String deiveryAddress;
 
 	public Long getId() {
 		return id;
@@ -26,19 +26,19 @@ public class Purchase {
 		this.requestId = requestId;
 	}
 
-	public Long getWaitingIime() {
+	public Integer getWaitingIime() {
 		return waitingIime;
 	}
 
-	public void setWaitingIime(Long waitingIime) {
+	public void setWaitingIime(Integer waitingIime) {
 		this.waitingIime = waitingIime;
 	}
 
-	public Long getDeiveryAddress() {
+	public String getDeiveryAddress() {
 		return deiveryAddress;
 	}
 
-	public void setDeiveryAddress(Long deiveryAddress) {
+	public void setDeiveryAddress(String deiveryAddress) {
 		this.deiveryAddress = deiveryAddress;
 	}
 	

@@ -23,8 +23,12 @@ public class PurchaseDTO {
 	public void setAddress(AddressDTO address) {
 		this.address = address;
 	}
-	
-	
-	
 
+	@Override
+	public String toString() {
+		return "PurchaseDTO{" +
+				"itens=" + itens +
+				", address=" + address +
+				'}';
+	}
 }
