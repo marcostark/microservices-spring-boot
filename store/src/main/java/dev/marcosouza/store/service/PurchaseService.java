@@ -15,12 +15,10 @@ public class PurchaseService {
 
 		RestTemplate client = new RestTemplate();
 		ResponseEntity<SupplierDTO> exchange =
-				client.exchange("http://localhost:8080/info/" + purchase.getAddress().getUf(),
+				client.exchange("http://localhost:8081/info/" + purchase.getAddress().getUf(),
 				HttpMethod.GET, null, SupplierDTO.class);
 
-		System.out.println(exchange.getBody().toString());
+		System.out.println(exchange.getBody().getAddress());
 	}
-
-
 }
 
