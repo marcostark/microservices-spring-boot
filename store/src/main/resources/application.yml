@@ -1,9 +1,6 @@
-server:
-  port: 8081
-
 spring:
   application:
-    name: 'fornecedor'
+    name: 'loja'
 
 eureka:
   client:
